@@ -13,7 +13,7 @@ class Fazenda(models.Model):
             return f"{self.nome} ({self.cpf_cnpj})"
 
         
-class Usuario(models.Model);
+class Usuario(models.Model):
     nome = models.CharField(max_length=50)
     login = models.CharField(max_length=50)
     senha = models.CharField(max_length=18)
@@ -25,7 +25,7 @@ class Usuario(models.Model);
     def __str__(self):
         return f"{self.nome} ({self.login})"
 
-class Cargo(models.Model);
+class Cargo(models.Model):
     nome = models.CharField(max_length=50)
     permicao = models.ForeignKey(
         Permicao, on_delete=models.PROTECT
