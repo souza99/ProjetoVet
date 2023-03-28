@@ -31,3 +31,8 @@ class Cargo(models.Model):
         Permicao, on_delete=models.PROTECT
     )
 
+class Historico(models.Model):
+    animal = models.ForeignKey(
+        Animal, on_delete=models.PROTECT
+    )
+

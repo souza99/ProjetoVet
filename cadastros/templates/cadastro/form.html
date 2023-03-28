@@ -1,0 +1,18 @@
+{% extends "paginas/modelo.html" %}
+
+{% load static %}
+
+{% block conteudo %}
+<h1 class="mt-5">Formulário de cadastro e edição</h1>
+
+<form action="" mathod="post">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+
+    <button type="submit" class="btn btn-sucess"> </button>
+
+</form>
+
+{% endblock %}
